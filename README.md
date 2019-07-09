@@ -11,6 +11,19 @@ Fork and clone this repo. On your fork, answer and commit the follow questions. 
 
 - Translate at least 3 of the capital names into another language.
 
+```swift
+var citiesDict = ["Portugal": "Lisbon", "Peru": "Lima", "Mexico": "Mexico City"]
+
+citiesDict["Republica Dominicana"] = "Santo Domingo"
+citiesDict["Venezuela"] = "Caracas"
+
+citiesDict["Republica Dominicana"] = "Saint-Domingue"
+citiesDict["Portugal"] = "Lisboa"
+citiesDict["Mexico"] = "Ciudad de Mexico"
+
+print(citiesDict)
+```
+
 
 ## Question 2
 
