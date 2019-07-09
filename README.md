@@ -166,6 +166,19 @@ var code = [
 ]
 
 var message = "hello world"
+var encoded = ""
+
+for c in message {
+    for (key, value) in code {
+        if String(c) == key {
+            encoded.append(value)
+        } else if String(c) == " " {
+            encoded.append(c)
+            break
+        }
+    }
+}
+print(encoded)
 ```
 
 You are also given an `encodedMessage` which contains only lowercase letters and spaces. Use the `code` dictionary to decode the message and print it.
