@@ -228,6 +228,16 @@ print(firstNames)
 
 Now, create an array of strings called `fullNames` that contains the values for `“firstName”` and `“lastName”` from the dictionary separated by a space.
 
+```swift
+var fullNames: [String] = []
+
+for person in people {
+    fullNames.append(person.values.joined(separator: " "))
+}
+print(fullNames)
+
+```
+
 
 ## Question 6
 
