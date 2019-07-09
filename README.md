@@ -100,16 +100,36 @@ Create a variable that is explicitly typed as a dictionary that maps strings to 
 | C.S. Lewis | 9.9 |
 | Jon Krakauer | 6.1 |
 
+```swift
+var authorScore:[String:Double] = ["Mark Twain": 8.9, "Nathaniel Hawthorne": 5.1, "John Steinbeck": 2.3, "C.S. Lewis": 9.9, "Jon Krakauer": 6.1 ]
+print(authorScore)
+```
 Using the dictionary created in the previous problem, do the following:
 
 - Print out the floating-point score for “John Steinbeck”.
+```swift
+print(authorScore["John Steinbeck"]!)
+```
 
 - Add an additional author named “Erik Larson” with an assigned score of 9.2.
+```swift
+authorScore["Erik Larson"] = 9.2
+```
 
 - Write an if/else statement that compares the score of John Krakaur with Mark Twain. Print out the name of the author with the highest score.
-
+```swift
+if authorScore["Jon Krakauer"] ?? 0 > authorScore["Mark Twain"] ?? 0 {
+    print("John Krakaur")
+}else{
+    print("Mark Twain")
+}
+```
 - Use a for-loop to iterate through the dictionary you created at the beginning of the problem, and print out the content in the form of key: value, one entry per line.
-
+```swift
+for (key, value) in authorScore {
+    print(key, value)
+}
+```
 
 ## Question 4
 
