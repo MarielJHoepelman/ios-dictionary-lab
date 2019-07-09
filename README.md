@@ -31,15 +31,61 @@ print(citiesDict)
 
 - Using `someDict`, add together the values associated with "Three" and "Five" and print the result.
 
+```swift
+var sum = 0
+if someDict["Three"] != nil && someDict["Five"] != nil {
+    sum = ((someDict["Three"])! + (someDict["Five"])!)
+    print(sum)
+} else {
+    print("Unable to perfom sum. At least one value is equal to nil")
+}
+```
+
 - Add values to the dictionary for the keys "Six" and "Seven".
 
+```swift
+someDict["Six"] = 30
+someDict["Seven"] = 40
+print(someDict)
+```
+
 - Make a key called `productUpToSeven` and set its value equal to the product of all the values.
+```swift
+var productUpToSeven = 1
+for (_, value) in someDict {
+    productUpToSeven = (productUpToSeven * value)
+}
+print(productUpToSeven)
+```
 
 - Make a key called `sumUpToSix` and set its value equal to the sum of the keys "One", "Two", "Three", "Four", "Five" and "Six".
 
+```swift
+var sumUpToSix = 0
+for (key, value) in someDict where key != "Seven" {
+    sumUpToSix = (sumUpToSix + value)
+}
+print(sumUpToSix)
+```
 - Remove the new keys made in the previous two steps
+```swift
+for (key, _) in someDict {
+    if key == "Six" {
+        someDict.removeValue(forKey: "Six")
+    } else if key == "Seven" {
+        someDict.removeValue(forKey: "Seven")
+    }
+}
+print(someDict)
+```
 
 - Add 2 to every value inside of `someDict`.
+```swift
+for (key, value) in someDict {
+    someDict[key] = (Int(value) + 2)
+}
+print(someDict)
+```
 
 
 ## Question 3
