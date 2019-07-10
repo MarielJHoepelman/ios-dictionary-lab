@@ -290,6 +290,21 @@ var peopleWithScores: [[String: String]] = [
 
 Print out the dictionary above in the following format:  **full name - score**
 
+```swift
+var highestPerson: [String: String] = [:]
+var hiScore:Int = 0
+
+for person in peopleWithScores{
+    let tempScore = Int(person["score"]!)!
+    if tempScore > hiScore {
+        highestPerson = person
+        hiScore = tempScore
+    }
+}
+
+print("\(highestPerson["firstName"]!) \(highestPerson["lastName"]!) - \(highestPerson["score"]!)")
+```
+
 
 ## Question 7
 
