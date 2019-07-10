@@ -314,6 +314,22 @@ You are given an array of integers. The frequency of a number is the number of t
 
 Print the numbers in ascending order followed by their frequency.
 
+```swift
+var freqDict = [Int: Int]()
+
+for num in numbers{
+    if freqDict.keys.contains(num) {
+        freqDict[num] = freqDict[num]! + 1
+    } else {
+        freqDict[num] = 1
+    }
+}
+
+for (key, value) in freqDict.sorted(by: <) {
+    print(key, value)
+}
+```
+
 
 ## Question 8
 
