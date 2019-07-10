@@ -306,6 +306,30 @@ Print the most common letter in the string below:
 
 `var myString = "We're flooding people with information. We need to feed it through a processor. A human must turn information into intelligence or knowledge. We've tended to forget that no computer will ever ask a new question."`
 
+```swift
+var freqDict = [Character: Int]()
+var mostFrequent:Character = " "
+
+var count:Int = 0
+
+for c in myString where c != " "{
+    if freqDict.keys.contains(c) {
+        freqDict[c] = freqDict[c]! + 1
+    } else {
+        freqDict[c] = 1
+}
+
+if let temp = freqDict[c] as? Int {
+    if temp > count{
+        mostFrequent = c
+        count = temp
+        }
+    }
+}
+
+print(mostFrequent)
+```
+
 
 ## Question 9
 
