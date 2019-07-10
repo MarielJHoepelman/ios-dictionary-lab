@@ -184,6 +184,21 @@ print(encoded)
 You are also given an `encodedMessage` which contains only lowercase letters and spaces. Use the `code` dictionary to decode the message and print it.
 `var encodedMessage = "uijt nfttbhf jt ibse up sfbe"`
 
+```swift
+var decodedMessage = ""
+
+for c in encodedMessage {
+    for (key,value) in code {
+        if String(c) == value {
+            decodedMessage.append(key)
+        } else if String(c) == " " {
+            decodedMessage.append(c)
+            break
+            }
+        }
+}
+print(decodedMessage)
+```
 
 ## Question 5
 
