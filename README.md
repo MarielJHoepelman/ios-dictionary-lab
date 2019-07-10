@@ -366,6 +366,16 @@ print(mostFrequent)
 
 Write code that creates a dictionary where the keys are Ints between 0 and 20 inclusive, and each key's value is its cube.
 
+```swift
+var dict = [Int: Int]()
+
+for i in 0...20{
+    dict[i] = Int(pow(Double(i), Double(3)))
+}
+
+print(dict)
+```
+
 
 ## Question 10
 
